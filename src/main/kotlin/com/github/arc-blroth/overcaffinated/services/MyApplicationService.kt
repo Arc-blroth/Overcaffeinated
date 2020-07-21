@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.arc-blroth.overcaffinated.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.arc-blroth.overcaffinated.MyBundle
 
 class MyApplicationService {
 

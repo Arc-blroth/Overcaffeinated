@@ -1,8 +1,8 @@
-package org.jetbrains.plugins.template.listeners
+package com.github.arc-blroth.overcaffinated.listeners
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import org.jetbrains.plugins.template.services.MyProjectService
+import com.github.arc-blroth.overcaffinated.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 
