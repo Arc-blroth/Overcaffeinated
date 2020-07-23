@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>ai.arcblroth.overcaffinated</id>
     <name>Overcaffinated</name>
+    <id>ai.arcblroth.overcaffinated</id>
     <vendor>Arcblroth</vendor>
 
     <!-- Product and plugin compatibility requirements -->
