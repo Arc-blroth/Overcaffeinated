@@ -54,7 +54,7 @@ intellij {
 //  Plugin Dependencies:
 //  https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_dependencies.html
 //
-//  setPlugins("java")
+    setPlugins("git4idea")
 }
 
 // Configure detekt plugin.
@@ -109,6 +109,11 @@ tasks {
         token(System.getenv("PUBLISH_TOKEN"))
         channels(pluginVersion.split('-').getOrElse(1) { "default" }.split('.').first())
     }
+
+    runIde {
+        jvmArgs("--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+    }
+
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
@@ -117,8 +122,4 @@ compileKotlin.kotlinOptions {
 val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
-}
-
-tasks.runIde {
-    jvmArgs("--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
 }

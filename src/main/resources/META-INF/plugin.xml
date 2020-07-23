@@ -6,10 +6,11 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="ai.arcblroth.overcaffinated.services.MyApplicationService"/>
-        <projectService serviceImplementation="ai.arcblroth.overcaffinated.services.MyProjectService"/>
+        <applicationService serviceImplementation="ai.arcblroth.overcaffinated.services.OCApplicationService"/>
+        <projectService serviceImplementation="ai.arcblroth.overcaffinated.services.OCProjectService"/>
     </extensions>
 
     <projectListeners>

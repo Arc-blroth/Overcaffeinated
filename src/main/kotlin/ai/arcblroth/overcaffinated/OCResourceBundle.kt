@@ -5,9 +5,9 @@ import org.jetbrains.annotations.NonNls
 import org.jetbrains.annotations.PropertyKey
 
 @NonNls
-private const val BUNDLE = "messages.ResourceBundle"
+private const val BUNDLE = "messages.OCResourceBundle"
 
-object MyBundle : AbstractBundle(BUNDLE) {
+object OCResourceBundle : AbstractBundle(BUNDLE) {
 
     @Suppress("SpreadOperator")
     @JvmStatic
