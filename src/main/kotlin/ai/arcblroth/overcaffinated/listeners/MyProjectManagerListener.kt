@@ -1,8 +1,8 @@
-package com.github.arc-blroth.overcaffinated.listeners
+package ai.arcblroth.overcaffinated.listeners
 
+import ai.arcblroth.overcaffinated.services.MyProjectService
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.arc-blroth.overcaffinated.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 

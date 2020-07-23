@@ -1,6 +1,6 @@
-package com.github.arc-blroth.overcaffinated.services
+package ai.arcblroth.overcaffinated.services
 
-import com.github.arc-blroth.overcaffinated.MyBundle
+import ai.arcblroth.overcaffinated.MyBundle
 
 class MyApplicationService {
 

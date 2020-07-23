@@ -1,19 +1,19 @@
 <idea-plugin>
-    <id>com.github.arc-blroth.overcaffinated</id>
+    <id>ai.arcblroth.overcaffinated</id>
     <name>Overcaffinated</name>
-    <vendor>arc-blroth</vendor>
+    <vendor>Arcblroth</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.arc-blroth.overcaffinated.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.arc-blroth.overcaffinated.services.MyProjectService"/>
+        <applicationService serviceImplementation="ai.arcblroth.overcaffinated.services.MyApplicationService"/>
+        <projectService serviceImplementation="ai.arcblroth.overcaffinated.services.MyProjectService"/>
     </extensions>
 
     <projectListeners>
-        <listener class="com.github.arc-blroth.overcaffinated.listeners.MyProjectManagerListener"
+        <listener class="ai.arcblroth.overcaffinated.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 </idea-plugin>
