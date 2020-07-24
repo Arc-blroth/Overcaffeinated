@@ -1,6 +1,6 @@
-package ai.arcblroth.overcaffinated.services
+package ai.arcblroth.overcaffeinated.services
 
-import ai.arcblroth.overcaffinated.OCResourceBundle
+import ai.arcblroth.overcaffeinated.OCResourceBundle
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
@@ -23,7 +23,7 @@ class OCProjectService(project: Project) {
         logger.info(OCResourceBundle.message("projectService", project.name))
         Notifications.Bus.notify(
             Notification(
-                "ai.arcblroth.overcaffinated",
+                "ai.arcblroth.overcaffeinated",
                 OCResourceBundle.message("name"),
                 OCResourceBundle.message("projectServiceInitMessage"),
                 NotificationType.INFORMATION

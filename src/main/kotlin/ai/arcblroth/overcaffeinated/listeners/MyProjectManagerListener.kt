@@ -1,6 +1,6 @@
-package ai.arcblroth.overcaffinated.listeners
+package ai.arcblroth.overcaffeinated.listeners
 
-import ai.arcblroth.overcaffinated.services.OCProjectService
+import ai.arcblroth.overcaffeinated.services.OCProjectService
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
 

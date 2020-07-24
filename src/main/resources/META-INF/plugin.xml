@@ -1,6 +1,6 @@
 <idea-plugin>
-    <name>Overcaffinated</name>
-    <id>ai.arcblroth.overcaffinated</id>
+    <name>overcaffeinated</name>
+    <id>ai.arcblroth.overcaffeinated</id>
     <vendor>Arcblroth</vendor>
 
     <!-- Product and plugin compatibility requirements -->
@@ -9,12 +9,12 @@
     <depends>Git4Idea</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="ai.arcblroth.overcaffinated.services.OCApplicationService"/>
-        <projectService serviceImplementation="ai.arcblroth.overcaffinated.services.OCProjectService"/>
+        <applicationService serviceImplementation="ai.arcblroth.overcaffeinated.services.OCApplicationService"/>
+        <projectService serviceImplementation="ai.arcblroth.overcaffeinated.services.OCProjectService"/>
     </extensions>
 
     <projectListeners>
-        <listener class="ai.arcblroth.overcaffinated.listeners.MyProjectManagerListener"
+        <listener class="ai.arcblroth.overcaffeinated.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 </idea-plugin>
