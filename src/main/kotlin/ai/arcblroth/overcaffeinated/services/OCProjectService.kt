@@ -8,16 +8,21 @@ import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task.Backgroundable
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.vcs.VcsNotifier
 import git4idea.GitUtil
 import git4idea.actions.GitInit
 import git4idea.commands.Git
 import git4idea.i18n.GitBundle
 
+
 class OCProjectService(project: Project) {
 
-    private val logger = Logger.getInstance(OCProjectService::class.java.name)
+    val logger = Logger.getInstance(OCProjectService::class.java.name)
+    var isOvercaffeinatedRunning = false
+        private set
     var isGitInit = false
+        private set
 
     init {
         logger.info(OCResourceBundle.message("projectService", project.name))
@@ -30,10 +35,13 @@ class OCProjectService(project: Project) {
             )
         )
 
+        isOvercaffeinatedRunning = true
+
         // Init Git
-        val root = project.projectFile?.parent
-        if(root != null) {
-            if(!GitUtil.isUnderGit(root)) {
+        val root = project.guessProjectDir()
+        println(root?.toString())
+        if (root != null) {
+            if (!GitUtil.isUnderGit(root)) {
                 logger.info("Running git init")
                 object : Backgroundable(project, GitBundle.getString("common.refreshing")) {
                     override fun run(indicator: ProgressIndicator) {
@@ -56,5 +64,13 @@ class OCProjectService(project: Project) {
             }
             isGitInit = true
         }
+
     }
+
+    companion object {
+        fun getInstance(project: Project): OCProjectService? {
+            return project.getService(OCProjectService::class.java)
+        }
+    }
+
 }

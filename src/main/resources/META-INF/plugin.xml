@@ -6,6 +6,7 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
     <depends>Git4Idea</depends>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -14,7 +15,15 @@
     </extensions>
 
     <projectListeners>
-        <listener class="ai.arcblroth.overcaffeinated.listeners.MyProjectManagerListener"
+        <listener class="ai.arcblroth.overcaffeinated.listeners.OCProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
+
+    <applicationListeners>
+        <listener class="ai.arcblroth.overcaffeinated.listeners.OCSaveListener"
+                  topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
+        <listener class="ai.arcblroth.overcaffeinated.listeners.OCEditCommandListener"
+                  topic="com.intellij.openapi.command.CommandListener"/>
+    </applicationListeners>
+
 </idea-plugin>
