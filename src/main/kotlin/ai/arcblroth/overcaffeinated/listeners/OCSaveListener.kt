@@ -11,5 +11,4 @@ class OCSaveListener : BulkFileListener {
         // When things are written to disk, invoke git sync
         ProjectManager.getInstance().openProjects.forEach { syncProject(it) }
     }
-
 }

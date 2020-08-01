@@ -15,7 +15,6 @@ import git4idea.actions.GitInit
 import git4idea.commands.Git
 import git4idea.i18n.GitBundle
 
-
 class OCProjectService(project: Project) {
 
     val logger = Logger.getInstance(OCProjectService::class.java.name)
@@ -64,7 +63,6 @@ class OCProjectService(project: Project) {
             }
             isGitInit = true
         }
-
     }
 
     companion object {
@@ -72,5 +70,4 @@ class OCProjectService(project: Project) {
             return project.getService(OCProjectService::class.java)
         }
     }
-
 }

@@ -10,5 +10,4 @@ internal class OCProjectManagerListener : ProjectManagerListener {
         // Creates service, contrary to name
         project.getService(OCProjectService::class.java)
     }
-
 }
